@@ -19,7 +19,7 @@ async def greet(msg, *users: discord.Member):
     names=[user.name for user in users]
     await msg.send(f"Hello there {' '.join(names)}")
 
-@bot.command()
+@bot.command(aliases=['echo','copy','say'])
 async def repeat(msg,*,message=None):
     if message == None:
         await msg.send("Enter a message to repeat")
