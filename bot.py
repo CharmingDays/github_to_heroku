@@ -27,7 +27,7 @@ async def repeat(msg,*,message=None):
     else:
         await msg.send(f"{msg.author.name}: {message}")
                    
-@commands.has_role("President")(ban_users=True)
+@commands.has_role("President")
 @bot.command()
 async def ban(msg,*users:discord.Member):
     if not users:
