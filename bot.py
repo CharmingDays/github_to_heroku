@@ -14,7 +14,7 @@ async def on_ready():
     print(f"{bot.user.name} is now running!")
 
     
-await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching,name='TEXT HERE'))
+await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching,name='ThatSucks'))
     
     
 @bot.command()
