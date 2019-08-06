@@ -4,8 +4,8 @@ import asyncio
 import os
 
 
-#GIVE YOUR BOT A PREFIX; mine is a.
-bot = commands.Bot(command_prefix="$")
+#GIVE YOUR BOT A PREFIX; mine is s.
+bot = commands.Bot(command_prefix="s.")
 
 
 #PRINT THE DISCORD BOT'S NAME WHEN IT'S READY
@@ -13,9 +13,6 @@ bot = commands.Bot(command_prefix="$")
 async def on_ready():
     print(f"{bot.user.name} is now running!")
 
-    
-await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching,name='ThatSucks'))
-    
     
 @bot.command()
 async def greet(msg, *users: discord.Member):
