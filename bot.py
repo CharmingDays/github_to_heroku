@@ -13,7 +13,10 @@ bot = commands.Bot(command_prefix="$")
 async def on_ready():
     print(f"{bot.user.name} is now running!")
 
-
+    
+await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching,name='TEXT HERE'))
+    
+    
 @bot.command()
 async def greet(msg, *users: discord.Member):
     names=[user.name for user in users]
