@@ -17,4 +17,4 @@ Video link: https://www.youtube.com/watch?v=Wal2taXZEAY&t=1s
 ```
   
  #### The BOT_TOKEN should be the name of the config var name in heroku
- <img src="images/token.png" width="100">
+ <img src="images/token.png" width="600">
