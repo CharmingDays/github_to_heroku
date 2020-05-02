@@ -8,14 +8,10 @@ discord should be added there if you're hosing your python bot or your discord b
 Video link: https://www.youtube.com/watch?v=Wal2taXZEAY&t=1s
 
 #### Inside the Procfile should be:
-```py
-    worker: python filename.py
-```
+`worker: python filename.py`
  
 #### Inside current Procfile in repo:
-```py
-    worker: python bot.py
-```
+`worker: python bot.py`
   
  #### The BOT_TOKEN should be the name of the config var name in heroku
  <img src="images/token.png" width="600">
