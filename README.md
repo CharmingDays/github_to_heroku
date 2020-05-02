@@ -14,7 +14,6 @@ Video link: https://www.youtube.com/watch?v=Wal2taXZEAY&t=1s
 #### Inside current Procfile in repo:
 ```py
     worker: python bot.py
-    
 ```
   
  
