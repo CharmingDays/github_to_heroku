@@ -7,9 +7,14 @@ discord should be added there if you're hosing your python bot or your discord b
 Video link: https://www.youtube.com/watch?v=Wal2taXZEAY&t=1s
 
 #### Inside the Procfile should be:
-  `worker: python filename.py`
+```py
+    worker: python filename.py
+```
  
 #### Inside current Procfile in repo:
-  `worker: python bot.py`
+```py
+    worker: python bot.py
+    
+```
   
  
