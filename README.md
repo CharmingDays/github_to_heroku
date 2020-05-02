@@ -1,7 +1,7 @@
 This is the example for the youtube video of how to upload your discord bot to heroku to run your bot 24/7.
 
 
-### Add your modules that are not pre-installed along with Python `inside requirements.txt` file
+### Add your modules that are not pre-installed along with Python inside `requirements.txt` file
 discord should be added there if you're hosing your python bot or your discord bot will not work
 
 
