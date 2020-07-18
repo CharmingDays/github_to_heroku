@@ -4,9 +4,8 @@ import asyncio
 import os
 
 
-#GIVE YOUR BOT A PREFIX; mine is a.
-bot = commands.Bot(command_prefix="$")
-
+#GIVE YOUR BOT A PREFIX; mine is s.
+bot = commands.Bot(command_prefix="s.")
 
 
 #PRINT THE DISCORD BOT'S NAME WHEN IT'S READY
@@ -14,16 +13,28 @@ bot = commands.Bot(command_prefix="$")
 async def on_ready():
     print(f"{bot.user.name} is now running!")
 
-
+    
 @bot.command()
+
 async def greet(msg,user:discord.Member):
     await msg.send(f"Hello there {user}")
 
 
+@bot.command(aliases=['echo','copy','say'])
+async def repeat(msg,*,message=None):
+    if message == None:
+        await msg.send("Enter a message to repeat")
+    
+    else:
+        await msg.send(f"{msg.author.name}: {message}")
+                   
+@commands.has_any_role(["President","Owner"])
 @bot.command()
-async def greet(msg,user:discord.Member):
-    await msg.send(f"Hello there {user}")
-  
-#IF YOU WISH TO HOST YOUR CODE PUBLICALLY HIDE YOUR TOKEN VIA METHOD BELOW
-#YOU CAN USE os.environ TO HIDE YOUR BOT TOKEN: SAVE YOUR BOT TOKEN AS THE NAME YOU GAVE IN os.environ['name'] ON HEROKU Config Vars
+async def ban(msg,*users:discord.Member):
+    if not users:
+        await msg.send("Please mention a user to ban")
+    else:
+        for i in users:
+            await msg.guild.ban(i)                   
+
 bot.run(os.environ['BOT_TOKEN'])
